@@ -1,6 +1,6 @@
 from flask import Flask, send_from_directory, jsonify
-from dataset import city_data
-from utils import get_aqi_category, health_advice
+from backend.dataset import city_data
+from backend.utils import get_aqi_category, health_advice
 import numpy as np
 import joblib
 import os
@@ -8,7 +8,7 @@ import os
 app = Flask(__name__)
 
 # Load ML model
-model = joblib.load("model.pkl")
+model = joblib.load("backend/model.pkl")
 
 # Serve HTML file
 @app.route("/")
