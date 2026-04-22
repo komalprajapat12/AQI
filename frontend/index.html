@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>AQI Dashboard</title>
+
+<link rel="stylesheet" href="/style.css">
+
+<link rel="stylesheet"
+href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<h1>🌍 Air Quality Index Dashboard</h1>
+
+<input
+type="text"
+id="cityInput"
+placeholder="Enter City (Delhi, Jaipur...)">
+
+<button onclick="searchCity()">
+Search
+</button>
+
+<div id="map"></div>
+
+<div id="info">
+
+<h2 id="aqiValue">AQI:</h2>
+
+<p id="category"></p>
+
+<p id="advice"></p>
+
+</div>
+
+<canvas id="pollutantChart"></canvas>
+
+<script
+src="https://unpkg.com/leaflet/dist/leaflet.js">
+</script>
+
+<script src="/script.js"></script>
+
+</body>
+
+</html>
